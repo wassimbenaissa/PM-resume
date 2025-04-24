@@ -1,0 +1,196 @@
+%-------------------------
+% Resume in LaTeX Template
+% Based on a resume by: Wassim Benaissa
+% Original sources: https://github.com/sb2nov/resume & https://github.com/posquit0/Awesome-CV
+% License : MIT
+%------------------------
+
+\documentclass[9pt, letterpaper]{article} % Reduced base font size to 9pt
+
+%-------------------------
+% PACKAGES
+%-------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5} % Icons
+\usepackage{xcolor}
+% \usepackage{lato} % Font: Lato (Commented out)
+\usepackage{helvet} % Font: Helvetica (Added)
+% \usepackage{sourcesanspro} % Font: Source Sans Pro (Added)
+\usepackage{microtype} % Improve typography
+
+%-------------------------
+% LAYOUT & STYLE
+%-------------------------
+
+% Margins (slightly reduced top/bottom)
+\geometry{
+    left=0.5in,
+    right=0.5in,
+    top=0.4in,  % Reduced top margin
+    bottom=0.4in, % Reduced bottom margin
+    showframe=false % Set to true to see layout boundaries
+}
+
+% Colors
+\definecolor{headings}{HTML}{4A4A4A} % Dark grey for headings
+\definecolor{text}{HTML}{333333}    % Slightly lighter grey for text
+\definecolor{accent}{HTML}{007ACC}  % Blue accent for links/icons (example)
+\definecolor{dates}{HTML}{666666}   % Grey for dates
+
+% Font Setup
+\renewcommand*\familydefault{\sfdefault} % Set default font to sans-serif (Helvetica)
+\color{text}
+
+% Section Formatting (Minimal spacing)
+\titleformat{\section}
+    {\Large\bfseries\color{headings}} % Format: Large, bold, heading color
+    {}                               % Label (none)
+    {0em}                            % Separation between label and title
+    {}                               % Code before title
+    [\titlerule\vspace{0.1ex}]       % Minimal space after rule
+\titlespacing*{\section}{0pt}{1ex}{0.2ex} % Spacing: left, before (minimal), after (minimal)
+
+% Remove paragraph indentation globally
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.15ex} % Minimal space between paragraphs/items
+
+% Hyperlink Style
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=accent,
+    filecolor=accent
+}
+
+% List Environment Defaults (Minimal spacing)
+\setlist{
+    leftmargin=*,     % Use natural indentation
+    labelsep=0.5em,    % Space between label and text
+    itemsep=0ex,       % No space between items
+    parsep=0ex,        % Space between paragraphs within item (none)
+    topsep=0ex         % <--- Set space at top of list to zero
+}
+\setlist[1]{label=\textbullet} % Top level uses bullets
+\setlist[2]{label=-}           % Second level uses dashes
+
+%-------------------------
+% CUSTOM COMMANDS
+%-------------------------
+
+% Header Contact Item
+\newcommand{\contactitem}[2]{%
+    \mbox{\small\color{accent}#1 \hspace{1pt}{\color{text}\texttt{#2}}}%
+}
+
+% Entry with Title, Subtitle, Location, Dates (No extra spacing)
+\newcommand{\entry}[4]{%
+    \vspace{0.5ex}
+    \textbf{#1} \hfill {\small\color{dates} #4} \\ % Title and Dates (right-aligned)
+    \textit{#2} \hfill \textit{\small\color{dates} #3} % Subtitle and Location (right-aligned)
+}
+
+%-------------------------------------------
+% DOCUMENT START
+%-------------------------------------------
+\begin{document}
+
+%---------- HEADING ----------
+\begin{center}
+    {\Huge\bfseries\color{headings} Alex Chen} \\[0.2ex] % Minimal space
+    {\large\bfseries Product Manager | SaaS \& Platform Strategy} \\[0.8ex] % Minimal space
+    \contactitem{\faPhone*}{\hspace{0.5ex}+1 (555) 123-4567} \hspace{0.8em} % Minimal space between items
+    \contactitem{\faEnvelope}{\hspace{0.5ex}alex.chen@email.com} \hspace{0.8em} % Minimal space between items
+    \contactitem{\faLinkedin}{\hspace{0.5ex}\href{https://www.linkedin.com/in/alexchen}{linkedin.com/in/alexchen}} \hspace{0.8em} % Minimal space between items
+    % Add other contact items like GitHub, Portfolio, etc. if needed
+    \contactitem{\faGithub}{\hspace{0.5ex}\href{https://github.com/alexchen}{github.com/alexchen}} \hspace{0.8em}
+    \contactitem{\faMapMarker*}{\hspace{0.5ex}San Francisco, CA} \\[1ex] % Minimal space after header
+\end{center}
+
+%----------- EXPERIENCE -----------
+% Use one \entry + \begin{itemize}...\end{itemize} block for each position
+\section{EXPERIENCE}
+
+\entry{Senior Product Manager}
+      {\textbf{Innovate Solutions Inc.} — Leading B2B SaaS Provider}
+      {San Francisco, CA}
+      {Jan 2020 -- Present}
+
+\begin{itemize}
+    \item Led the product strategy and roadmap definition for the core CRM platform, resulting in a 30% increase in user engagement metrics.
+    \item Managed the end-to-end lifecycle of three major feature releases, coordinating cross-functional teams (Engineering, Design, Marketing, Sales) of 15+ members.
+    \item Conducted extensive user research and market analysis to identify and prioritize customer needs, translating insights into actionable product requirements using PRDs and user stories.
+    \item Drove a 20% YoY growth in ARR for the product line by launching a new pricing tier and optimizing the onboarding flow.
+    \item Championed agile methodologies (Scrum), acting as Product Owner, improving team velocity by 15%.
+\end{itemize}
+
+\entry{Product Manager}
+      {\textbf{TechStart Co.}}
+      {Austin, TX}
+      {Jun 2017 -- Dec 2019}
+\begin{itemize}
+    \item Owned the product backlog for a new mobile application, successfully launching the MVP within 6 months.
+    \item Collaborated with UX/UI designers to iterate on wireframes and prototypes based on user feedback, leading to a 25% improvement in task completion rates.
+    \item Analyzed product usage data using SQL and analytics platforms (e.g., Mixpanel) to inform feature prioritization and A/B testing strategies.
+\end{itemize}
+
+% Add more entries as needed for your work history
+
+
+%----------- ENTREPRENEURIAL EXPERIENCE / PROJECTS (Optional Section) -----------
+% Rename or remove section if not applicable
+\section{PROJECTS} % Or "ENTREPRENEURIAL EXPERIENCE"
+
+\entry{Side Project: "TaskFlow"}
+      {Personal Productivity Web App}
+      {Remote}
+      {2021 -- Present}
+\begin{itemize}
+    \item Designed and developed a simple Kanban-style task management application using React and Firebase.
+    \item Acquired initial user base through online communities, gathering feedback for future iterations.
+\end{itemize}
+
+
+%----------- EDUCATION -----------
+\section{EDUCATION}
+
+\entry{Master of Business Administration (MBA)}
+      {\textbf{University of California, Berkeley, Haas School of Business}}
+      {Berkeley, CA}
+      {2015 -- 2017}
+\begin{itemize}
+   \item Focus: Technology Management \& Entrepreneurship
+%    \item \textbf{Thesis}: [Thesis Title]
+   \item Honors: Beta Gamma Sigma Honor Society
+\end{itemize}
+
+\entry{BSc Computer Science}
+      {\textbf{University of Texas at Austin}}
+      {Austin, TX}
+      {2011 -- 2015}
+
+
+%----------- SKILLS / MISCELLANEOUS -----------
+% Rename section header as needed (e.g., SKILLS, TECHNICAL SKILLS, CERTIFICATIONS)
+\section{SKILLS}
+
+% Use \textbf for categories, list skills. Be concise.
+\textbf{Product Management}: Roadmapping, Agile Methodologies (Scrum, Kanban), User Research, Market Analysis, PRD/User Stories, A/B Testing, Competitive Analysis, Go-to-Market Strategy
+
+\textbf{Technical}: SQL, Python (Basic), API Design Principles, Data Analysis
+
+\textbf{Tools \& Platforms}: Jira, Confluence, Figma, Mixpanel, Google Analytics, Salesforce, Amplitude
+
+\textbf{Languages}: \textbf{English} (Native), \textbf{Mandarin Chinese} (Conversational)
+
+\textbf{Certifications}: Certified Scrum Product Owner (CSPO)
+
+
+%-------------------------------------------
+\end{document}
+%------------------------------------------- 
