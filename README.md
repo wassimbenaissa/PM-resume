@@ -1,6 +1,6 @@
 # LaTeX Resume Template
 
-This is a simple, clean, one-page LaTeX resume template based on the structure used by Wassim Benaissa, originally inspired by Awesome-CV and sb2nov's resume.
+This is a simple, clean, one-page LaTeX resume template based on the structure originally inspired by Awesome-CV and sb2nov's resume.
 
 It uses the Helvetica font and is designed for a professional look with minimal clutter.
 
